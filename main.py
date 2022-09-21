@@ -3,7 +3,7 @@ from documentcloud import DocumentCloud
 import gdrivedl	
 class GDriveImport(AddOn):
 	def main(self):
-		file = self.data.get("url") #input("URL \n")
+		file = self.data.get("url") #input("URL \n") for local testing
 		gdrivedl.main(file)
 		title = self.data.get("projectname") #input("Title \n") for local testing
 		project, created = self.client.projects.get_or_create_by_title(title)
