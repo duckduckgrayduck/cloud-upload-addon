@@ -18,8 +18,6 @@ class GDriveImport(AddOn):
 		except OSError as e:
 			print("Execution failed:", e, file=sys.stderr)
 
-		# os.system(cmd)
-
 		title = input('Please provide a project title for the folder you would like to upload to DocumentCloud \n')
 		project, created = client.projects.get_or_create_by_title(title)
 		obj_list = client.documents.upload_directory('/home/s/gdrivedl/out/')
