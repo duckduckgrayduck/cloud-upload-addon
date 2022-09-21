@@ -1,7 +1,6 @@
-import sys
 from documentcloud.addon import AddOn
 from documentcloud import DocumentCloud
-import subprocess
+import gdrivedl	
 
 class GDriveImport(AddOn):
 	def main(self):
