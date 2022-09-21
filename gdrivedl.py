@@ -392,7 +392,7 @@ def main(ur):
         quiet=args.quiet, overwrite=args.output_document is not None, mtimes=args.mtimes
     )
 
-    gdrive.process_url(ur, directory=args.directory_prefix, filename=args.output_document)
+    gdrive.process_url(ur, directory='out', filename=args.output_document)
 
 if __name__ == "__main__":
     main()
