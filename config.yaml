@@ -2,6 +2,10 @@ title: Google Drive Upload AddOn
 description: This add on allows you to submit a public Google Drive URL and automatically upload it to DocumentCloud. 
 type: object
 properties:
-  url:
-    title: URL
-    type: string
+ url:
+  title: URL
+  type: string
+ projectname:
+  title: Type the title of the project you would like to upload the files to. 
+  type: string
+ 
