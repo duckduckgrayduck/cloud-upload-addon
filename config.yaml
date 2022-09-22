@@ -5,7 +5,7 @@ properties:
  url:
   title: URL
   type: string
- projectname:
+ pname:
   title: Type the title of the project you would like to upload the files to. 
   type: string
 required:
