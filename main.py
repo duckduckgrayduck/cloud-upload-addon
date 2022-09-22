@@ -3,9 +3,9 @@ from documentcloud import DocumentCloud
 import gdrivedl	
 class GDriveImport(AddOn):
 	def main(self):
-		file = self.data.get("url") #input("URL \n") for local testing
+		file = self.data.get("url")
 		gdrivedl.main(file)
-		title = self.data.get("projectname") #input("Title \n") for local testing
+		title = self.data.get("projectname")
 		project, created = self.client.projects.get_or_create_by_title(title)
 		obj_list = self.client.documents.upload_directory('./out/')
 		project.document_list = obj_list
