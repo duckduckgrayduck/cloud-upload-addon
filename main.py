@@ -1,6 +1,6 @@
 from documentcloud.addon import AddOn
 from documentcloud import DocumentCloud
-import gdrivedl	
+import lootdl
 import shutil
 import os
 
