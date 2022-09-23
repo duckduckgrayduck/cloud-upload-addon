@@ -5,7 +5,7 @@
 
 # DocumentCloud Google Drive Upload Add-On
 
-This repository contains an Add-On that allows users of DocumentCloud to submit a Google Drive link whose permissions are set to "Anyone with the link" to automatically download the file or folder and upload it to DocumentCloud. 
+This repository contains an Add-On that allows users of DocumentCloud to submit public links from Google Drive, Dropbox, Wetransfer, and Mediafire to automatically download the file or folder and upload it to DocumentCloud. 
 
  ## Acknowledgements 
  
