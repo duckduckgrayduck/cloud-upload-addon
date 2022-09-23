@@ -1,5 +1,5 @@
-title: Google Drive Upload AddOn
-description: This add on allows you to submit a public Google Drive URL and automatically upload it to DocumentCloud. 
+title: Document Transfer Tool
+description: This add on allows you to submit a public Dropbox, Google Drive, WeTransfer, or MediaFire link and automatically upload it to DocumentCloud. 
 type: object
 properties:
  url:
