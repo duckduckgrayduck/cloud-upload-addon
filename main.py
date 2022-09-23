@@ -2,6 +2,7 @@ from documentcloud.addon import AddOn
 from documentcloud import DocumentCloud
 import gdrivedl	
 import shutil
+import os
 
 class Import(AddOn):
 	def main(self):
