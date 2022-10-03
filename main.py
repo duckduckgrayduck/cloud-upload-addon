@@ -24,7 +24,7 @@ class Import(AddOn):
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         url = self.data.get("url")
         lootdl.grab(file, "./out/")
-        title = self.data.get("projectname")
+        title = self.data["project_name"]
         project, created = self.client.projects.get_or_create_by_title(title)
         self.client.documents.upload_directory("./out/", project=project.id)
         shutil.rmtree("./out/", ignore_errors=False, onerror=None)
