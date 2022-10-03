@@ -22,7 +22,7 @@ class Import(AddOn):
         The temporary directory is then deleted.
         """
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
-        file = self.data.get("url")
+        url = self.data.get("url")
         lootdl.grab(file, "./out/")
         title = self.data.get("projectname")
         project, created = self.client.projects.get_or_create_by_title(title)
