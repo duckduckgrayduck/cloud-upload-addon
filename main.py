@@ -11,7 +11,8 @@ class Import(AddOn):
     Google Drive, Dropbox, Mediafire, and WeTransfer"""
 
     def main(self):
-        """This add-on creates a temporary directory(out),
+        """
+        This add-on creates a temporary directory(out),
         gets the URL from the DocumentCloud add-on prompt,
         gets the project name from the DocumentCloud add-on prompt,
         uses the lootdl library's grab() to download the files into ./out/,
