@@ -3,7 +3,7 @@
 
 [Please see the Add-On documentation](https://github.com/MuckRock/documentcloud-hello-world-addon/wiki/)
 
-# DocumentCloud Google Drive Upload Add-On
+# DocumentCloud Cloud Import Add-On
 
 This repository contains an Add-On that allows users of DocumentCloud to submit public links from Google Drive, Dropbox, Wetransfer, and Mediafire to automatically download the file or folder and upload it to DocumentCloud. 
 
