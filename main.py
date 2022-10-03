@@ -2,9 +2,8 @@
 and the DocumentCloud Add-On system"""
 import os
 import shutil
-from documentcloud.addon import AddOn
 import lootdl
-
+from documentcloud.addon import AddOn
 
 class Import(AddOn):
     """An Add-On that allows you to upload files into DocumentCloud from
