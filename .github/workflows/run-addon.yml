@@ -1,7 +1,11 @@
 name: Run Add-On
-on:
-  workflow_call:
-    inputs:
+on: 
+ repository_dispatch:
+  inputs:
+      timeout:
+        default: 60
+        required: false
+        type: number
       python-version:
         default: "3.10"
         required: false
@@ -14,14 +18,14 @@ on:
         default: ""
         required: false
         type: string
-    secrets:
-      dc_username:
+  secrets:
+     dc_username:
         required: false
-      dc_password:
+     dc_password:
         required: false
-      token:
+     token:
         required: false
-      key:
+     key:
        required: false
 
 jobs:
