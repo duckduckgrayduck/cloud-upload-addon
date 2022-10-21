@@ -1,6 +1,7 @@
 """ We use lootdl, a library to grab files from several file sharing sites
 and the DocumentCloud Add-On system"""
 import os
+import sys
 import shutil
 import lootdl
 from documentcloud.addon import AddOn
@@ -21,12 +22,17 @@ class Import(AddOn):
         The temporary directory is then deleted.
         """
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
+        stdout = sys.stdout
+        # suppress output to prevent leaking private information. 
+        sys.stdout = open(os.devnull, "w")
         url = self.data["url"]
         lootdl.grab(url, "./out/")
         title = self.data["project_name"]
         project, created = self.client.projects.get_or_create_by_title(title)
         self.client.documents.upload_directory("./out/", project=project.id)
         shutil.rmtree("./out/", ignore_errors=False, onerror=None)
+        # restore stdout
+        sys.stdout = stdout
 
 
 if __name__ == "__main__":
