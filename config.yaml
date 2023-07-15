@@ -8,7 +8,7 @@ properties:
  project_id:
   title: Type the ID of the project you would like to upload the files to. 
   type: integer
-access_level:
+ access_level:
   title: Access level (public, private, or organization) of the documents you would like to upload. 
   type: string
   default: public
