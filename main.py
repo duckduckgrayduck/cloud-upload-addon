@@ -27,9 +27,11 @@ class Import(AddOn):
         sys.stdout = open(os.devnull, "w")
         url = self.data["url"]
         lootdl.grab(url, "./out/")
-        title = self.data["project_name"]
-        project, created = self.client.projects.get_or_create_by_title(title)
-        self.client.documents.upload_directory("./out/", project=project.id)
+        project_id = self.data.get("project_id")
+        project = self.client.projects.get(project_id)
+        obj_list = self.client.documents.upload_directory("./out/", project=project.id)
+        project.document_list = obj_list
+        project.put()
         shutil.rmtree("./out/", ignore_errors=False, onerror=None)
         # restore stdout
         sys.stdout = stdout
