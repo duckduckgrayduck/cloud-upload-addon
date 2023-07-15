@@ -5,9 +5,13 @@ properties:
  url:
   title: URL
   type: string
- project_name:
-  title: Type the title of the project you would like to upload the files to. 
+ project_id:
+  title: Type the ID of the project you would like to upload the files to. 
+  type: integer
+access_level:
+  title: Access level (public, private, or organization) of the documents you would like to upload. 
   type: string
+  default: public
 required:
  - url
  - project_name
