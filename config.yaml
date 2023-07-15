@@ -14,4 +14,4 @@ access_level:
   default: public
 required:
  - url
- - project_name
+ - project_id
