@@ -1,6 +1,5 @@
 title: Import Documents
-description: This add on allows you to submit a public Dropbox, Google Drive, WeTransfer, or MediaFire link and automatically upload it to DocumentCloud. Note that for now mostly only PDFs are functioning. In the future all 70 file extension types will be supported.  
-type: object
+description: This add on allows you to submit a public Dropbox, Google Drive, WeTransfer, or MediaFire link and automatically upload the files contained within to DocumentCloud. This Add-On now supports uploads of [all 70 filetypes](https://www.documentcloud.org/help/api/#supported-file-types) supported by DocumentCloud. 
 properties:
  url:
   title: URL
