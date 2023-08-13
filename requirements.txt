@@ -3,3 +3,4 @@ requests
 tqdm
 patool
 bs4
+clouddl

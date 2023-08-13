@@ -3,7 +3,7 @@ and the DocumentCloud Add-On system"""
 import os
 import sys
 import shutil
-import lootdl
+from clouddl import grab
 from documentcloud.addon import AddOn
 
 class Import(AddOn):
@@ -26,7 +26,7 @@ class Import(AddOn):
         # suppress output to prevent leaking private information. 
         sys.stdout = open(os.devnull, "w")
         url = self.data["url"]
-        lootdl.grab(url, "./out/")
+        grab(url, "./out/")
         project_id = self.data.get("project_id")
         project = self.client.projects.get(project_id)
         obj_list = self.client.documents.upload_directory("./out/", extensions=None, project=project.id, access=self.data.get("access_level"))
