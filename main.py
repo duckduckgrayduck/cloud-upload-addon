@@ -1,7 +1,6 @@
 """ We use clouddl, a library to grab files from several file sharing sites
 and the DocumentCloud Add-On system"""
 import os
-import sys
 from clouddl import grab
 from documentcloud.addon import AddOn
 
