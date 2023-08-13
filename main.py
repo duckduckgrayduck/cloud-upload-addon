@@ -12,14 +12,8 @@ class Import(AddOn):
 
     def main(self):
         """
-        This add-on creates a temporary directory(out),
-        gets the URL from the DocumentCloud add-on prompt,
-        gets the project name from the DocumentCloud add-on prompt,
-        uses the lootdl library's grab() to download the files into ./out/,
-        finds the project matching the project name and uploads it to the project.
-        If the project doesn't exist, it creates the project and then uploads.
-        This is handled by get_or_create_by_title().
-        The temporary directory is then deleted.
+            Uses clouddl to grab documents from a Google Drive or Dropbox location, 
+            uploads them to DocumentCloud using upload_directory()
         """
         os.makedirs(os.path.dirname("./out/"), exist_ok=True)
         stdout = sys.stdout
